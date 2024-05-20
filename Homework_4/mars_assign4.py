@@ -13,10 +13,6 @@ from collections import OrderedDict
 import unittest
 import argparse 
 
-# Parse Arguments 
-parser = argparse.ArgumentParser()
-parser.add_argument("-m","--mode",default=1,type=int,help='Choose which exercise to do 1,2,3,4,5')
-args= parser.parse_args()
 
 font_dict = {'size':20,'weight':'bold'}
 fig_dict = {'bbox_inches':'tight','dpi':300}
@@ -403,7 +399,7 @@ def main():
         n += 1
 
         # Early Stopping Schedule 
-        if smooth_loss <=39.5:
+        if smooth_loss <=39:
             print(f"We find the optimal smooth loss at: {n}, Quit Loop")
             break
 #--------------------------------------------------
